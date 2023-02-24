@@ -2,6 +2,7 @@ package com.backend.model.order;
 
 import com.backend.model.user.User;
 import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -13,7 +14,7 @@ public class ProductOrder {
 
     private String orderDate;
 
-    private Integer deleteStatus;
+    private boolean deleteStatus = false;
 
     private Integer paymentStatus = 0;
 
@@ -30,7 +31,7 @@ public class ProductOrder {
     public ProductOrder() {
     }
 
-    public ProductOrder(Integer id, String orderDate, Integer deleteStatus, Integer paymentStatus, Long totalMoney, User user, List<ProductOrderDetail> productOrderDetailSet) {
+    public ProductOrder(Integer id, String orderDate, boolean deleteStatus, Integer paymentStatus, Long totalMoney, User user, List<ProductOrderDetail> productOrderDetailSet) {
         this.id = id;
         this.orderDate = orderDate;
         this.deleteStatus = deleteStatus;
@@ -56,11 +57,11 @@ public class ProductOrder {
         this.orderDate = orderDate;
     }
 
-    public Integer getDeleteStatus() {
+    public boolean isDeleteStatus() {
         return deleteStatus;
     }
 
-    public void setDeleteStatus(Integer deleteStatus) {
+    public void setDeleteStatus(boolean deleteStatus) {
         this.deleteStatus = deleteStatus;
     }
 

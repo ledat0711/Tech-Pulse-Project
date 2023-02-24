@@ -10,7 +10,7 @@ public class UserType {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
-    private Integer flagDelete;
+    private boolean flagDelete =false;
     @JsonBackReference
     @OneToMany(mappedBy = "userType")
     private Set<User> userSet;
@@ -18,7 +18,7 @@ public class UserType {
     public UserType() {
     }
 
-    public UserType(Integer id, String name, Integer flagDelete, Set<User> userSet) {
+    public UserType(Integer id, String name, boolean flagDelete, Set<User> userSet) {
         this.id = id;
         this.name = name;
         this.flagDelete = flagDelete;
@@ -41,11 +41,11 @@ public class UserType {
         this.name = name;
     }
 
-    public Integer getFlagDelete() {
+    public boolean isFlagDelete() {
         return flagDelete;
     }
 
-    public void setFlagDelete(Integer flagDelete) {
+    public void setFlagDelete(boolean flagDelete) {
         this.flagDelete = flagDelete;
     }
 

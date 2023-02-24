@@ -16,7 +16,7 @@ public class Account {
 
     private String password;
 
-    private Integer flagDelete;
+    private boolean flagDelete = false;
 
     private Integer lockStatus;
 
@@ -30,7 +30,7 @@ public class Account {
     public Account() {
     }
 
-    public Account(Long id, String username, String password, Integer flagDelete, Integer lockStatus, Set<AccountRole> accountRoleSet, User user) {
+    public Account(Long id, String username, String password, boolean flagDelete, Integer lockStatus, Set<AccountRole> accountRoleSet, User user) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -64,11 +64,11 @@ public class Account {
         this.password = password;
     }
 
-    public Integer getFlagDelete() {
+    public boolean isFlagDelete() {
         return flagDelete;
     }
 
-    public void setFlagDelete(Integer flagDelete) {
+    public void setFlagDelete(boolean flagDelete) {
         this.flagDelete = flagDelete;
     }
 

@@ -24,7 +24,7 @@ public class User {
 
     private String phone;
 
-    private Integer flagDelete;
+    private boolean flagDelete = false;
 
     @OneToOne
     @JoinColumn(name = "account_id", referencedColumnName = "id")
@@ -37,7 +37,7 @@ public class User {
     public User() {
     }
 
-    public User(Integer id, String avatar, String birthday, String email, String firstName, String lastName, String idCard, String phone, Integer flagDelete, Account account, UserType userType) {
+    public User(Integer id, String avatar, String birthday, String email, String firstName, String lastName, String idCard, String phone, boolean flagDelete, Account account, UserType userType) {
         this.id = id;
         this.avatar = avatar;
         this.birthday = birthday;
@@ -115,11 +115,11 @@ public class User {
         this.phone = phone;
     }
 
-    public Integer getFlagDelete() {
+    public boolean isFlagDelete() {
         return flagDelete;
     }
 
-    public void setFlagDelete(Integer flagDelete) {
+    public void setFlagDelete(boolean flagDelete) {
         this.flagDelete = flagDelete;
     }
 

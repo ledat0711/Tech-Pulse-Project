@@ -10,7 +10,7 @@ public class ImgUrlProduct {
     private Long id;
     private String url;
 
-    private Integer flagDelete;
+    private boolean flagDelete = false;
     @ManyToOne
     @JoinColumn(name = "device_id", referencedColumnName = "idDevice")
     private Device device;
@@ -18,7 +18,7 @@ public class ImgUrlProduct {
     public ImgUrlProduct() {
     }
 
-    public ImgUrlProduct(Long id, String url, Integer flagDelete, Device device) {
+    public ImgUrlProduct(Long id, String url, boolean flagDelete, Device device) {
         this.id = id;
         this.url = url;
         this.flagDelete = flagDelete;
@@ -41,11 +41,11 @@ public class ImgUrlProduct {
         this.url = url;
     }
 
-    public Integer getFlagDelete() {
+    public boolean isFlagDelete() {
         return flagDelete;
     }
 
-    public void setFlagDelete(Integer flagDelete) {
+    public void setFlagDelete(boolean flagDelete) {
         this.flagDelete = flagDelete;
     }
 

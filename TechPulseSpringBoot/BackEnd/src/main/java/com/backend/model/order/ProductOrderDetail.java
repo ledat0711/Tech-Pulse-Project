@@ -13,7 +13,7 @@ public class ProductOrderDetail {
 
     private Integer quantity;
 
-    private Integer deleteStatus;
+    private boolean deleteStatus = false;
 
     @JsonManagedReference
     @ManyToOne
@@ -28,7 +28,7 @@ public class ProductOrderDetail {
     public ProductOrderDetail() {
     }
 
-    public ProductOrderDetail(Integer id, Integer quantity, Integer deleteStatus, Device device, ProductOrder productOrder) {
+    public ProductOrderDetail(Integer id, Integer quantity, boolean deleteStatus, Device device, ProductOrder productOrder) {
         this.id = id;
         this.quantity = quantity;
         this.deleteStatus = deleteStatus;
@@ -52,14 +52,6 @@ public class ProductOrderDetail {
         this.quantity = quantity;
     }
 
-    public Integer getDeleteStatus() {
-        return deleteStatus;
-    }
-
-    public void setDeleteStatus(Integer deleteStatus) {
-        this.deleteStatus = deleteStatus;
-    }
-
     public Device getDevice() {
         return device;
     }
@@ -74,5 +66,13 @@ public class ProductOrderDetail {
 
     public void setProductOrder(ProductOrder productOrder) {
         this.productOrder = productOrder;
+    }
+
+    public boolean isDeleteStatus() {
+        return deleteStatus;
+    }
+
+    public void setDeleteStatus(boolean deleteStatus) {
+        this.deleteStatus = deleteStatus;
     }
 }
