@@ -1,0 +1,128 @@
+<div class="cart mt-4 mb-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <p class="link" routerLink="/home">Tiếp tục mua sắm</p>
+      </div>
+      <div class="col-lg-9 cart__list">
+        <div>
+          <div class="col-lg-2 cart__item--img">
+            <img class="d-block w-75" src="assets/images/plc0.png" alt="">
+          </div>
+          <div class="col-lg-2 cart__item--quality">
+            <div class="cart__controll d-flex justify-content-center">
+              <button class="quality__plus">
+                <i class="fa-solid fa-minus"></i>
+              </button>
+              <span class="quality" id="demo"></span>
+              <button class="quality__minus">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+            <div class="d-flex justify-content-center mt-3">
+              <button type="button" class="quality__plus" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-2 cart__item--price">
+            <p class="cart__total__price"><sup>đ</sup></p>
+          </div>
+          <div class="col-lg-1 cart__item--select">
+            <label class="checkboxs">
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <form action="">
+          <div class="mb-3">
+            <p class="title__ship mb-3">Thông tin giao hàng</p>
+          </div>
+          <div class="mb-3">
+            <p class="mb-2 color__primary" style="font-size: 16px">Đơn vị giao hàng</p>
+            <div class="ship__list">
+              <img  src="" alt="">
+            </div>
+          </div>
+          <div class="mb-3" style="padding-left: 8px;">
+            <p class="mb-2 color__primary" style="font-size: 16px">Địa chỉ giao hàng</p>
+            <div class="ship__address">
+              <div class="mx-2">
+                <input type="radio" id="address__me" name="address__ship" value="0" checked>
+                <label for="address__me" style="margin-left: 4px">Của tôi</label>
+              </div>
+              <div class="mx-2">
+                <input type="radio" id="address__orther" name="address__ship" value="0">
+                <label for="address__orther" style="margin-left: 4px">Địa chỉ khác</label>
+              </div>
+              <p class="w-100 mt-3 address__value" id="address__value">
+                Đà Nẵng, Việt Nam
+              </p>
+              <textarea id="address__value--orther" class="w-100 mt-3 address__value--orther hidden" rows="3">
+
+              </textarea>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-lg-9 my__pay">
+        <div class="d-flex mt-3 justify-content-end flex-wrap" style="opacity: 1 !important;">
+          <span class="note d-block w-100 d-flex justify-content-end">Phí giao hàng: <span class="color__primary"></span></span>
+          <p class="note">Tổng cộng: <span class="color__primary">10 000 000 đ</span></p>
+          <div class="w-100 d-flex justify-content-end">
+            <button class="pay__now">Thanh Toán Ngay</button>
+          </div>
+        </div>
+        <div id="myPaypalButtons" style="opacity: 0; display: flex; justify-content: right">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Xóa sản phẩm khỏi giỏi hàng.</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body row">
+        <div class="col-lg-6 cart__item--img">
+          <img class="d-block w-75" src="" alt="">
+        </div>
+        <div class="col-lg-6 cart__detail">
+          <p class="product__name">
+            PLC
+          </p>
+
+          <p class="product__price">
+            123456<sup>đ</sup>
+            <span class="product__price" style="text-decoration: line-through; color: #000000; margin-left: 12px; font-size: 16px">
+                123456 <sup>đ</sup>
+              </span>
+          </p>
+          <div class="product__colors">
+            <p>Màu sắc: Đỏ</p>
+            <p>
+              <span>CPU: 1214C</span>
+              <span style="margin-left: 12px">Thông số</span>
+            </p>
+            <p>Thông số</p>
+          </div>
+          <p>Số lượng xóa: <span class="color__primary">Thông số</span></p>
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Hủy</button>
+        <button type="button" class="btn btn-delete" data-bs-dismiss="modal">Xóa</button>
+      </div>
+    </div>
+  </div>
+</div>

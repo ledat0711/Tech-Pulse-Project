@@ -1,56 +1,48 @@
-<div style="height: 100vh; display: flex; justify-content: center; align-items: center">
-  <div class="container h-100">
-    <div class="row h-100 " style="display: flex; justify-content: center; align-items: center; box-sizing: border-box">
-      <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
-        <div class="card shadow-lg" style="box-sizing: border-box">
-          <div class="card-body">
-            <h1 class="mb-5 mt-2 text-primary h2 text-center">Đăng Nhập</h1>
-            <form>
-              <div class="form-floating mb-4">
-                <input formControlName="username" type="text" class="form-control" id="floatingInput"
-                       placeholder="name@example.com">
-                <label for="floatingInput">Tên tài khoản<small> *</small></label>
-              </div>
-
-              <div class="form-floating mb-4">
-                <input formControlName="password" type="password" class="form-control" id="floatingPassword"
-                       placeholder="name@example.com">
-                <label for="floatingPassword">Mật khẩu<small> *</small></label>
-              </div>
-
-              <div class="row form-floating mb-4">
-                <div class="col-7">
-                  <input type="checkbox" formControlName="rememberMe" name="remember" id="remember"
-                         class="form-check-input">
-                  <label style="margin-left: 3px" for="remember" class="form-check-label">Ghi nhớ đăng nhập</label>
-                </div>
-                <div class="col-5">
-                  <a routerLink="/security/change-password/:idAccount" class="float-end mb-1">
-                    Quên mật khẩu?
-                  </a>
-                </div>
-              </div>
-
-              <div class="row form-floating mb-4">
-                <div class="col-12">
-                  <button type="submit" class="btn btn-primary" style="width: 100%">
-                    Đăng Nhập
-                  </button>
-                </div>
-              </div>
-
-              <div class="mt-5 bordert">
-
-              </div>
-            </form>
-          </div>
-          <div class="card-footer py-3 border-1">
-            <div class="text-center">
-              Bạn chưa có tài khoản? <a routerLink="/customer/create" class="abc">Đăng ký ngay</a>
+<body class="img js-fullheight" style="background-image: url(assets/images/bg.jpg);" >
+<section class="ftco-section" >
+  <div class="container">
+    <div class="row justify-content-center">
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-4">
+        <div class="login-wrap p-0">
+          <h3 class="mb-4 text-center">Đăng nhập</h3>
+          <form action="#" class="signin-form">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Username" required>
             </div>
+            <div class="form-group">
+              <input id="password-field" type="password" class="form-control" placeholder="Password" required>
+              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="form-control btn btn-primary submit px-3">Sign In</button>
+            </div>
+            <div class="form-group d-md-flex">
+              <div class="w-50">
+                <label class="checkbox-wrap checkbox-primary">Remember Me
+                  <input type="checkbox" checked>
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <div class="w-50 text-md-right">
+                <a href="#" style="color: #fff">Forgot Password</a>
+              </div>
+            </div>
+          </form>
+          <p class="w-100 text-center">&mdash; Or Sign In With &mdash;</p>
+          <div class="social d-flex text-center">
+            <a href="#" class="px-2 py-2 mr-md-1 rounded"><span class="ion-logo-facebook mr-2"></span> Facebook</a>
+            <a href="#" class="px-2 py-2 ml-md-1 rounded"><span class="ion-logo-twitter mr-2"></span> Twitter</a>
           </div>
         </div>
       </div>
     </div>
   </div>
+</section>
+<div class="card-footer border-1">
+  <div class="text-center">
+    Bạn chưa có tài khoản? <a routerLink="/customer/create" class="abc">Đăng ký ngay</a>
+  </div>
 </div>
+</body>
