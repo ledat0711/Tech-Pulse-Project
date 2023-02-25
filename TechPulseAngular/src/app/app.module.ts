@@ -10,7 +10,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HeaderComponent } from './component/header/header.component';
 import { ProductDetailComponent } from './component/product-detail/product-detail.component';
 import { FooterComponent } from './component/footer/footer.component';
-import { ProductDetailTpComponent } from './component/product-detail-tp/product-detail-tp.component';
 import { HomeComponent } from './component/home/home.component';
 
 @NgModule({
@@ -19,7 +18,6 @@ import { HomeComponent } from './component/home/home.component';
     HeaderComponent,
     ProductDetailComponent,
     FooterComponent,
-    ProductDetailTpComponent,
     HomeComponent
   ],
   imports: [
