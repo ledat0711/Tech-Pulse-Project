@@ -5,16 +5,36 @@
         <p class="link" routerLink="/home">Tiếp tục mua sắm</p>
       </div>
       <div class="col-lg-9 cart__list">
-        <div>
+        <div class="row cart__item">
           <div class="col-lg-2 cart__item--img">
             <img class="d-block w-75" src="assets/images/plc0.png" alt="">
+          </div>
+          <div class="col-lg-5 cart__detail">
+            <p class="product__name">
+              #PLC
+            </p>
+
+            <p class="product__price">
+              123456 <sup>đ</sup>
+              <span class="product__price" style="text-decoration: line-through; color: #000000; margin-left: 12px; font-size: 16px">
+                123456 <sup>đ</sup>
+              </span>
+            </p>
+            <div class="product__colors">
+              <p>Màu sắc: Đỏ</p>
+              <p>
+                <span>CPU: 1214C</span>
+                <span style="margin-left: 12px">Thông số</span>
+              </p>
+              <p>Thông số</p>
+            </div>
           </div>
           <div class="col-lg-2 cart__item--quality">
             <div class="cart__controll d-flex justify-content-center">
               <button class="quality__plus">
                 <i class="fa-solid fa-minus"></i>
               </button>
-              <span class="quality" id="demo"></span>
+              <span class="quality" id="demo">Số lượng</span>
               <button class="quality__minus">
                 <i class="fa-solid fa-plus"></i>
               </button>
@@ -26,11 +46,11 @@
             </div>
           </div>
           <div class="col-lg-2 cart__item--price">
-            <p class="cart__total__price"><sup>đ</sup></p>
+            <p class="cart__total__price">123456<sup>đ</sup></p>
           </div>
           <div class="col-lg-1 cart__item--select">
             <label class="checkboxs">
-              <input type="checkbox">
+              <input type="checkbox" id="check-item-card-1">
               <span class="checkmark"></span>
             </label>
           </div>
@@ -44,7 +64,7 @@
           <div class="mb-3">
             <p class="mb-2 color__primary" style="font-size: 16px">Đơn vị giao hàng</p>
             <div class="ship__list">
-              <img  src="" alt="">
+              <img class="d-block ship__logo" alt="">
             </div>
           </div>
           <div class="mb-3" style="padding-left: 8px;">
@@ -59,7 +79,7 @@
                 <label for="address__orther" style="margin-left: 4px">Địa chỉ khác</label>
               </div>
               <p class="w-100 mt-3 address__value" id="address__value">
-                Đà Nẵng, Việt Nam
+                VN
               </p>
               <textarea id="address__value--orther" class="w-100 mt-3 address__value--orther hidden" rows="3">
 
@@ -71,8 +91,8 @@
 
       <div class="col-lg-9 my__pay">
         <div class="d-flex mt-3 justify-content-end flex-wrap" style="opacity: 1 !important;">
-          <span class="note d-block w-100 d-flex justify-content-end">Phí giao hàng: <span class="color__primary"></span></span>
-          <p class="note">Tổng cộng: <span class="color__primary">10 000 000 đ</span></p>
+          <span class="note d-block w-100 d-flex justify-content-end">Phí giao hàng: <span class="color__primary">123456đ</span></span>
+          <p class="note">Tổng cộng: <span class="color__primary">123456 đ</span></p>
           <div class="w-100 d-flex justify-content-end">
             <button class="pay__now">Thanh Toán Ngay</button>
           </div>
@@ -94,7 +114,7 @@
       </div>
       <div class="modal-body row">
         <div class="col-lg-6 cart__item--img">
-          <img class="d-block w-75" src="" alt="">
+          <img class="d-block w-75" src="assets/images/plc1.jpg" alt="">
         </div>
         <div class="col-lg-6 cart__detail">
           <p class="product__name">
@@ -102,20 +122,20 @@
           </p>
 
           <p class="product__price">
-            123456<sup>đ</sup>
+            123456 <sup>đ</sup>
             <span class="product__price" style="text-decoration: line-through; color: #000000; margin-left: 12px; font-size: 16px">
                 123456 <sup>đ</sup>
               </span>
           </p>
           <div class="product__colors">
-            <p>Màu sắc: Đỏ</p>
+            <p>Màu sắc: Xanh đậm</p>
             <p>
-              <span>CPU: 1214C</span>
+              <span>Thông số</span>
               <span style="margin-left: 12px">Thông số</span>
             </p>
             <p>Thông số</p>
           </div>
-          <p>Số lượng xóa: <span class="color__primary">Thông số</span></p>
+          <p>Số lượng xóa: <span class="color__primary">10</span></p>
 
         </div>
       </div>
