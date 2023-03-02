@@ -1,6 +1,6 @@
 package com.backend.model.order;
 
-import com.backend.model.device.Device;
+import com.backend.model.product.Product;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
@@ -17,8 +17,8 @@ public class ProductOrderDetail {
 
     @JsonManagedReference
     @ManyToOne
-    @JoinColumn(name = "device_id", referencedColumnName = "idDevice")
-    private Device device;
+    @JoinColumn(name = "product_id", referencedColumnName = "productId")
+    private Product product;
 
     @JsonManagedReference
     @ManyToOne
@@ -28,11 +28,11 @@ public class ProductOrderDetail {
     public ProductOrderDetail() {
     }
 
-    public ProductOrderDetail(Integer id, Integer quantity, boolean deleteStatus, Device device, ProductOrder productOrder) {
+    public ProductOrderDetail(Integer id, Integer quantity, boolean deleteStatus, Product product, ProductOrder productOrder) {
         this.id = id;
         this.quantity = quantity;
         this.deleteStatus = deleteStatus;
-        this.device = device;
+        this.product = product;
         this.productOrder = productOrder;
     }
 
@@ -52,12 +52,12 @@ public class ProductOrderDetail {
         this.quantity = quantity;
     }
 
-    public Device getDevice() {
-        return device;
+    public Product getProduct() {
+        return product;
     }
 
-    public void setDevice(Device device) {
-        this.device = device;
+    public void setProduct(Product product) {
+        this.product = product;
     }
 
     public ProductOrder getProductOrder() {

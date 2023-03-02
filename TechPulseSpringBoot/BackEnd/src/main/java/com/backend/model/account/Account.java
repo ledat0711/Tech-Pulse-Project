@@ -10,7 +10,7 @@ import java.util.Set;
 public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     private String username;
 
@@ -30,7 +30,7 @@ public class Account {
     public Account() {
     }
 
-    public Account(Long id, String username, String password, boolean flagDelete, Integer lockStatus, Set<AccountRole> accountRoleSet, User user) {
+    public Account(Integer id, String username, String password, boolean flagDelete, Integer lockStatus, Set<AccountRole> accountRoleSet, User user) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -40,11 +40,11 @@ public class Account {
         this.user = user;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

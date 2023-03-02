@@ -1,16 +1,16 @@
-package com.backend.model.device;
+package com.backend.model.product;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
-public class Device {
+public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idDevice;
-    private String nameDevice;
-    private String codeDevice;
+    private Long productId;
+    private String productName;
+    private String productCode;
     private String specifications;
     private String size;
     private String weight;
@@ -23,16 +23,16 @@ public class Device {
     private Category category;
 
     @JsonBackReference
-    @OneToMany(mappedBy = "device")
+    @OneToMany(mappedBy = "product")
     private List<ImgUrlProduct> imgUrlProductList;
 
-    public Device() {
+    public Product() {
     }
 
-    public Device(Long idDevice, String nameDevice, String codeDevice, String specifications, String size, String weight, String manufacturer, String origin, String guarantee, boolean deletedFlag, Category category, List<ImgUrlProduct> imgUrlProductList) {
-        this.idDevice = idDevice;
-        this.nameDevice = nameDevice;
-        this.codeDevice = codeDevice;
+    public Product(Long productId, String productName, String productCode, String specifications, String size, String weight, String manufacturer, String origin, String guarantee, boolean deletedFlag, Category category, List<ImgUrlProduct> imgUrlProductList) {
+        this.productId = productId;
+        this.productName = productName;
+        this.productCode = productCode;
         this.specifications = specifications;
         this.size = size;
         this.weight = weight;
@@ -44,28 +44,28 @@ public class Device {
         this.imgUrlProductList = imgUrlProductList;
     }
 
-    public Long getIdDevice() {
-        return idDevice;
+    public Long getProductId() {
+        return productId;
     }
 
-    public void setIdDevice(Long idDevice) {
-        this.idDevice = idDevice;
+    public void setProductId(Long productId) {
+        this.productId = productId;
     }
 
-    public String getNameDevice() {
-        return nameDevice;
+    public String getProductName() {
+        return productName;
     }
 
-    public void setNameDevice(String nameDevice) {
-        this.nameDevice = nameDevice;
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
-    public String getCodeDevice() {
-        return codeDevice;
+    public String getProductCode() {
+        return productCode;
     }
 
-    public void setCodeDevice(String codeDevice) {
-        this.codeDevice = codeDevice;
+    public void setProductCode(String productCode) {
+        this.productCode = productCode;
     }
 
     public String getSpecifications() {

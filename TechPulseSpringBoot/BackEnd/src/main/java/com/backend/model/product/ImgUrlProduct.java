@@ -1,4 +1,4 @@
-package com.backend.model.device;
+package com.backend.model.product;
 
 
 import javax.persistence.*;
@@ -12,17 +12,17 @@ public class ImgUrlProduct {
 
     private boolean flagDelete = false;
     @ManyToOne
-    @JoinColumn(name = "device_id", referencedColumnName = "idDevice")
-    private Device device;
+    @JoinColumn(name = "product_id", referencedColumnName = "productId")
+    private Product product;
 
     public ImgUrlProduct() {
     }
 
-    public ImgUrlProduct(Long id, String url, boolean flagDelete, Device device) {
+    public ImgUrlProduct(Long id, String url, boolean flagDelete, Product product) {
         this.id = id;
         this.url = url;
         this.flagDelete = flagDelete;
-        this.device = device;
+        this.product = product;
     }
 
     public Long getId() {
@@ -49,11 +49,11 @@ public class ImgUrlProduct {
         this.flagDelete = flagDelete;
     }
 
-    public Device getDevice() {
-        return device;
+    public Product getProduct() {
+        return product;
     }
 
-    public void setDevice(Device device) {
-        this.device = device;
+    public void setProduct(Product product) {
+        this.product = product;
     }
 }

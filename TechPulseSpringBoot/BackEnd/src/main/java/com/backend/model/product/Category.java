@@ -1,4 +1,4 @@
-package com.backend.model.device;
+package com.backend.model.product;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
@@ -13,12 +13,12 @@ public class Category {
     private String name;
     @JsonBackReference
     @OneToMany(mappedBy = "category")
-    private Set<Device> deviceSet;
+    private Set<Product> deviceSet;
 
     public Category() {
     }
 
-    public Category(Long idCategory, String name, Set<Device> deviceSet) {
+    public Category(Long idCategory, String name, Set<Product> deviceSet) {
         this.idCategory = idCategory;
         this.name = name;
         this.deviceSet = deviceSet;
@@ -40,11 +40,11 @@ public class Category {
         this.name = name;
     }
 
-    public Set<Device> getDeviceSet() {
+    public Set<Product> getDeviceSet() {
         return deviceSet;
     }
 
-    public void setDeviceSet(Set<Device> deviceSet) {
+    public void setDeviceSet(Set<Product> deviceSet) {
         this.deviceSet = deviceSet;
     }
 }
